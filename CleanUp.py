@@ -8,15 +8,13 @@ import os
 import sys
 import time
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 3:
     print('Error, missing arguments! Usage is day(s) /path/to/dir/')
     exit(1)
 
 days = int(sys.argv[1])
-folders = []
+folders = sys.argv[2:]
 
-for i in range(2, len(sys.argv)):
-    folders.append(sys.argv[i])
 
 total_deleted_size = 0
 total_deleted_file = 0
